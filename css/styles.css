@@ -1,0 +1,39 @@
+/* Обнулення */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+a:link {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+
+.body {
+	font-family: "Montserrat", sans-serif;
+	color: #111;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.conteiner {
+	padding: 0 15px;
+	margin: 0 auto;
+	max-width: 1166px;
+	height: 100%;
+}
+
+/* HEADER */
+.logo {
+	color: #111;
+	font-weight: 700;
+	line-height: 1.29;
+	letter-spacing: -0.42px;
+	text-transform: uppercase;
+}
+
+.logo_italic {
+	font-style: italic;
+}
