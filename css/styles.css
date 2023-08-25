@@ -11,11 +11,12 @@ ul {
 	list-style-type: none;
 }
 
-.body {
+body {
 	font-family: "Montserrat", sans-serif;
 	color: #111;
 	font-weight: 400;
 	font-size: 14px;
+	background: #fafafa;
 }
 
 .conteiner {
@@ -28,12 +29,76 @@ ul {
 /* HEADER */
 .logo {
 	color: #111;
+	font-size: 21.6px;
 	font-weight: 700;
-	line-height: 1.29;
-	letter-spacing: -0.42px;
+	line-height: 1.11;
+	letter-spacing: -0.54px;
 	text-transform: uppercase;
+	text-align: center;
+	background: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
 }
 
 .logo_italic {
 	font-style: italic;
+}
+
+.header_nav {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 26px;
+	padding-bottom: 34px;
+}
+
+.header_nav_list {
+	display: flex;
+	column-gap: 24px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.header_add_list {
+	display: flex;
+	column-gap: 18px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.header_add_item {
+	/* display: inline-block; */
+	justify-content: center;
+	align-items: center;
+}
+
+.nav_text {
+	display: inline-block;
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: -0.28px;
+}
+
+.nav_text a {
+	color: #111;
+}
+
+.header_add_item a {
+	display: block;
+	text-align: center;
+}
+
+.start_page {
+	padding-bottom: 72px;
+}
+
+.cover {
+	background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%), url(<path-to-image>),
+		lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat;
+	background-image: url(/images/svg/chocolate-covered.png);
+	background-repeat: no-repeat;
 }
