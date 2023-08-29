@@ -3,6 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+			rel="stylesheet"
+			integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -46,11 +53,20 @@
 			<!-- Hero Page -->
 			<section class="start_page">
 				<div class="conteiner">
-					<div class="cover">
-						<h1>Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
-						<button type="button">Buy now</button>
-						<a href="#">How it’s made</a>
-						<a href="#">scroll down<img src="./images/svg/arrow.svg" alt="scroll down" /></a>
+					<div class="start_page_cover">
+						<h1 class="primer_text">Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
+						<div class="start_page_interactive">
+							<ul class="start_page_button">
+								<li class="main_button"><button type="button">Buy now</button></li>
+								<li><button type="button">How it’s made</button></li>
+							</ul>
+							<ul class="start_page_link">
+								<li><a href="#">How it’s made</a></li>
+								<li>
+									<a href="#">scroll down<img src="./images/svg/arrow.svg" alt="scroll down" /></a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>

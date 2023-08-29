@@ -1,3 +1,11 @@
+:root {
+	--wrapper: #fafafa;
+	--maintext: #111;
+	--mainbgc: #fcf1e0;
+	--ligth_text: #fff;
+	--subbgc: #fd9222;
+}
+
 /* Обнулення */
 * {
 	padding: 0px;
@@ -13,10 +21,10 @@ ul {
 
 body {
 	font-family: "Montserrat", sans-serif;
-	color: #111;
+	color: var(--maintext);
 	font-weight: 400;
 	font-size: 14px;
-	background: #fafafa;
+	background: var(--wrapper);
 }
 
 .conteiner {
@@ -28,14 +36,14 @@ body {
 
 /* HEADER */
 .logo {
-	color: #111;
+	color: currentColor;
 	font-size: 21.6px;
 	font-weight: 700;
 	line-height: 1.11;
 	letter-spacing: -0.54px;
 	text-transform: uppercase;
 	text-align: center;
-	background: #fafafa;
+	background: var(--wrapper);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -84,7 +92,7 @@ body {
 }
 
 .nav_text a {
-	color: #111;
+	color: currentColor;
 }
 
 .header_add_item a {
@@ -92,13 +100,65 @@ body {
 	text-align: center;
 }
 
+/* Hero Page */
 .start_page {
-	padding-bottom: 72px;
+	/* padding-bottom: 72px; */
 }
 
-.cover {
-	background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%), url(<path-to-image>),
-		lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat;
-	background-image: url(/images/svg/chocolate-covered.png);
+.start_page_cover {
+	background: var(--mainbgc);
+	background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%), url(../images/svg/chocolate-covered.png);
+	/* lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat; */
 	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 30px;
+	overflow: hidden;
+	padding: 381px 40px 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	flex-shrink: 0;
+}
+
+.primer_text {
+	color: var(--ligth_text);
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 1.21; /* 121.429% */
+	letter-spacing: -0.84px;
+	max-width: 484px;
+}
+
+.start_page_interactive {
+	display: flex;
+	max-width: 100%;
+	flex: 0 1 100%;
+}
+
+.start_page_button {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+}
+
+.main_button {
+	display: block;
+	color: var(--ligth_text);
+	font-weight: 600;
+	background-color: var(--subbgc);
+	border-radius: 100px;
+	padding: 14px 40px;
+}
+
+.main_button button {
+	color: var(--ligth_text);
+	background-color: var(--subbgc);
+}
+
+.main_button .start_page_link {
+	display: block;
+	align-items: flex-end;
 }
