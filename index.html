@@ -23,49 +23,68 @@
 	<body>
 		<header>
 			<div class="conteiner">
-				<nav class="header_nav">
-					<a class="logo" href="./index.html" target="_blank"
-						><span class="logo_italic">Simply</span> chocolate
-						<img src="../Simply_chocolate/images/svg/SC_logo.svg" alt="Logo of Simply Chocolate" width="24px"
-					/></a>
-					<ul class="header_nav_list">
-						<li class="nav_text"><a href="#">Home</a></li>
-						<li class="nav_text"><a href="#">How it’s made?</a></li>
-						<li class="nav_text"><a href="#">Our products</a></li>
-						<li class="nav_text"><a href="#">Top sellers</a></li>
-						<li class="nav_text"><a href="#">Chocolate is loved</a></li>
-					</ul>
+				<div class="header">
+					<nav class="header__nav">
+						<a class="header__logo" href="./index.html" target="_blank">
+							<span class="header__logo_italic">simply</span> chocolate
+							<svg class="header__svg" width="24" height="24">
+								<use href="./images/icons.svg#icon-SC_logo"></use>
+							</svg>
+						</a>
+						<ul class="header__list">
+							<li><a class="header__navlink" href="#S0">Home</a></li>
+							<li><a class="header__navlink" href="#S1">How it’s made?</a></li>
+							<li><a class="header__navlink" href="#S2">Our products</a></li>
+							<li><a class="header__navlink" href="#S3">Top sellers</a></li>
+							<li><a class="header__navlink" href="#S4">Chocolate is loved</a></li>
+						</ul>
+					</nav>
+					<!-- TODO РОЗІБРАТИСЬ З ВІДСТУПАМИ ТА ІКОНКАМИ ДОДАТИ ХОВЕРИ -->
 					<address>
-						<ul class="header_add_list">
-							<!-- TODO прибрати в посиланні нижні 2px -->
-							<li class="header_add_item">
-								<a href="#" target="_blank"><img src="../Simply_chocolate/images/svg/instagram.svg" alt="Link to instagram" width="24px" /></a>
+						<ul class="header__addlist">
+							<li>
+								<a class="header__addlink" href="https://www.instagram.com/" target="_blank">
+									<svg width="24" height="24">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="header_add_item">
-								<a href="#" target="_blank"><img src="../Simply_chocolate/images/svg/twitter.svg" alt="Link to twitter" width="24px" /></a>
+							<li>
+								<a class="header__addlink" href="https://twitter.com/" target="_blank">
+									<svg width="24" height="24">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
 							</li>
 						</ul>
 					</address>
-				</nav>
+				</div>
 			</div>
 		</header>
 		<main>
 			<!-- Hero Page -->
-			<section class="start_page">
+			<section class="hero-page">
 				<div class="conteiner">
-					<div class="start_page_cover">
-						<h1 class="primer_text">Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
-						<div class="start_page_interactive">
-							<ul class="start_page_button">
-								<li class="main_button"><button type="button">Buy now</button></li>
-								<li><button type="button">How it’s made</button></li>
-							</ul>
-							<ul class="start_page_link">
-								<li><a href="#">How it’s made</a></li>
+					<div class="hero-page__inner">
+						<h1 class="hero-page__primertext" id="S0">Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
+						<div class="hero-page__interactive">
+							<ul class="hero-page__list">
 								<li>
-									<a href="#">scroll down<img src="./images/svg/arrow.svg" alt="scroll down" /></a>
+									<button class="hero-page__button main_button" type="button">Buy now</button>
+								</li>
+								<li>
+									<a class="hero-page__buttonlink" href="#S1">How it’s made</a>
 								</li>
 							</ul>
+
+							<div class="hero-page__svglink">
+								<a class="hero-page__textlink" href="#">scroll down</a>
+								<a class="hero-page__click" href="#">
+									<svg class="hero-page__svg" width="22" height="22">
+										<use href="./images/icons.svg#icon-arrow"></use>
+									</svg>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -76,7 +95,9 @@
 				<h2></h2>
 				<ul>
 					<li>
-						<img src="./images/svg/icons_chocolate.svg" alt="Chocolate" width="62px" />
+						<svg width="32" height="32">
+							<use href="./images/icons.svg#icon-icons_chocolate"></use>
+						</svg>
 						<h3>Unsurpassed taste</h3>
 						<p>
 							Crafted with the finest quality cocoa beans and a dedication to perfection, each bite is a decadent experience that simply cannot be matched.
@@ -84,7 +105,9 @@
 						</p>
 					</li>
 					<li>
-						<img src="./images/svg/icons_coin.svg" alt="Coin" width="62px" />
+						<svg width="32" height="32">
+							<use href="./images/icons.svg#icon-icons_coin"></use>
+						</svg>
 						<h3>Affordable price</h3>
 						<p>
 							Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats. Enjoy mouth-watering truffles
@@ -92,7 +115,9 @@
 						</p>
 					</li>
 					<li>
-						<img src="./images/svg/icons_spoon.svg" alt="Spoon" width="62px" />
+						<svg width="32" height="32">
+							<use href="./images/icons.svg#icon-icons_spoon"></use>
+						</svg>
 						<h3>Own production</h3>
 						<p>
 							We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients to
@@ -131,7 +156,7 @@
 
 			<!-- Video -->
 			<section>
-				<h2>hOW IT’S made?</h2>
+				<h2 id="S1">hOW IT’S made?</h2>
 				<img src="./images/png/video.png" alt="Video" width="600px" />
 				<h3>Try our chocolates today and discover the perfect balance of flavor</h3>
 				<ul>
@@ -145,7 +170,7 @@
 
 			<!-- Products -->
 			<section>
-				<h2>Our pRODUCTS</h2>
+				<h2 id="S2">Our pRODUCTS</h2>
 				<ul>
 					<li>
 						<img src="./images/png/orange.png" alt="Dark chocolate" />
@@ -176,7 +201,7 @@
 
 			<!-- Sellers -->
 			<section>
-				<h2>tOp Sellers</h2>
+				<h2 id="S3">tOp Sellers</h2>
 				<ul>
 					<li><img src="./images/png/sellers01.png" alt="Chocolate, coffee, nut" width="368px" /></li>
 					<li><img src="./images/png/sellers02.png" alt="Chocolate with nuts" width="368px" /></li>
@@ -191,7 +216,7 @@
 
 			<!--Review -->
 			<section>
-				<h2>chocolate is loved</h2>
+				<h2 id="S4">chocolate is loved</h2>
 				<ul>
 					<li>
 						<img src="./images/png/Victoria Dobrzhanska.png" alt="Victoria Dobrzhanska" width="200px" />
