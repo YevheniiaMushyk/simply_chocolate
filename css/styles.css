@@ -34,6 +34,7 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+	object-fit: cover;
 }
 
 /*-------Загальні стилі------*/
@@ -415,4 +416,56 @@ p.benefits__text {
 	line-height: 1.29;
 	letter-spacing: -0.28px;
 	text-transform: uppercase;
+}
+
+/* ------Video-------  */
+.prepare {
+	margin-bottom: 128px;
+}
+.prepare__title {
+	margin: 0 auto 50px;
+}
+
+.prepare__content {
+	display: flex;
+	column-gap: 20px;
+	/* height: 100%; */
+	flex-wrap: wrap;
+}
+.prepare__imgpart {
+	position: relative;
+	flex-basis: calc((100% - 20px) / 2);
+	height: 100%;
+}
+.prepare__svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.prepare__textpart {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	flex-basis: calc((100% - 20px) / 2);
+	height: 100%;
+	padding: 32px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	background: var(--ligth_text);
+}
+.prepare__smtitle {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.33;
+}
+.prepare__list {
+	display: flex;
+	flex-direction: column;
+	gap: 24;
+	list-style-type: disc;
+}
+.prepare__item {
+	padding-left: 16px;
 }
