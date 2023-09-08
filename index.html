@@ -32,11 +32,11 @@
 							</svg>
 						</a>
 						<ul class="header__list">
-							<li><a class="header__navlink" href="#S0">Home</a></li>
-							<li><a class="header__navlink" href="#S1">How it’s made?</a></li>
-							<li><a class="header__navlink" href="#S2">Our products</a></li>
-							<li><a class="header__navlink" href="#S3">Top sellers</a></li>
-							<li><a class="header__navlink" href="#S4">Chocolate is loved</a></li>
+							<li class="header__navitem"><a class="header__navlink" href="#S0">Home</a></li>
+							<li class="header__navitem"><a class="header__navlink" href="#S1">How it’s made?</a></li>
+							<li class="header__navitem"><a class="header__navlink" href="#S2">Our products</a></li>
+							<li class="header__navitem"><a class="header__navlink" href="#S3">Top sellers</a></li>
+							<li class="header__navitem"><a class="header__navlink" href="#S4">Chocolate is loved</a></li>
 						</ul>
 					</nav>
 					<!-- TODO РОЗІБРАТИСЬ З ВІДСТУПАМИ ТА ІКОНКАМИ ДОДАТИ ХОВЕРИ -->
@@ -77,12 +77,14 @@
 								</li>
 							</ul>
 
-							<div class="hero-page__svglink">
-								<a class="hero-page__textlink" href="#">scroll down</a>
-								<a class="hero-page__click" href="#">
-									<svg class="hero-page__svg" width="22" height="22">
-										<use href="./images/icons.svg#icon-arrow"></use>
-									</svg>
+							<div>
+								<a class="hero-page__svglink" href="#">
+									<span class="hero-page__textlink">scroll down</span>
+									<span class="hero-page__click">
+										<svg class="hero-page__svg" width="22" height="22">
+											<use href="./images/icons.svg#icon-arrow"></use>
+										</svg>
+									</span>
 								</a>
 							</div>
 						</div>
@@ -91,40 +93,47 @@
 			</section>
 
 			<!-- Benefits -->
-			<section>
-				<h2></h2>
-				<ul>
-					<li>
-						<svg width="32" height="32">
-							<use href="./images/icons.svg#icon-icons_chocolate"></use>
-						</svg>
-						<h3>Unsurpassed taste</h3>
-						<p>
-							Crafted with the finest quality cocoa beans and a dedication to perfection, each bite is a decadent experience that simply cannot be matched.
-							Savor the richness and complexity of our Unsurpassed Taste and discover a new level of chocolate bliss.
-						</p>
-					</li>
-					<li>
-						<svg width="32" height="32">
-							<use href="./images/icons.svg#icon-icons_coin"></use>
-						</svg>
-						<h3>Affordable price</h3>
-						<p>
-							Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats. Enjoy mouth-watering truffles
-							and velvety chocolate bars without sacrificing taste or quality. Browse our selection and indulge in affordable luxury today.
-						</p>
-					</li>
-					<li>
-						<svg width="32" height="32">
-							<use href="./images/icons.svg#icon-icons_spoon"></use>
-						</svg>
-						<h3>Own production</h3>
-						<p>
-							We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients to
-							handcrafting each piece, our attention to detail is evident in every bite.
-						</p>
-					</li>
-				</ul>
+			<section class="benefits">
+				<div class="conteiner">
+					<h2 class="benefits__title">benefits list</h2>
+					<ul class="benefits__list">
+						<li class="benefits__item">
+							<svg class="benefits__svg" width="32" height="32">
+								<use href="./images/icons.svg#icon-icons_chocolate"></use>
+							</svg>
+							<h3 class="benefits__subtitle">Unsurpassed taste</h3>
+							<p class="benefits__text">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error modi recusandae natus, incidunt, quam consequatur cupiditate veniam
+								necessitatibus fugiat earum doloremque laudantium sapiente, sunt beatae corrupti ab asperiores esse? Quia. Crafted with the finest quality cocoa
+								beans and a dedication to perfection, each bite is a decadent experience that simply cannot be matched. Savor the richness and complexity of our
+								Unsurpassed Taste and discover a new level of chocolate bliss.
+							</p>
+						</li>
+						<li class="benefits__item">
+							<svg class="benefits__svg" width="32" height="32">
+								<use href="./images/icons.svg#icon-icons_coin"></use>
+							</svg>
+							<h3 class="benefits__subtitle">Affordable price</h3>
+							<p class="benefits__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet animi quisquam pariatur aliquid vitae labore iste ipsum possimus, ea, quasi
+								repellat incidunt sequi quam vero nam! Voluptates adipisci consequatur maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+								quo voluptatem iure eius cum nisi ea deleniti doloremque commodi autem itaque minus, corrupti amet nobis esse. Unde molestiae dolorem a. Indulge
+								in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats. Enjoy mouth-watering truffles and
+								velvety chocolate bars without sacrificing taste or quality. Browse our selection and indulge in affordable luxury today.
+							</p>
+						</li>
+						<li class="benefits__item">
+							<svg class="benefits__svg" width="32" height="32">
+								<use href="./images/icons.svg#icon-icons_spoon"></use>
+							</svg>
+							<h3 class="benefits__subtitle">Own production</h3>
+							<p class="benefits__text">
+								We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients
+								to handcrafting each piece, our attention to detail is evident in every bite.
+							</p>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<!-- Ingridients -->

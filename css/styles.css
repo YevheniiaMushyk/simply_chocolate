@@ -1,12 +1,15 @@
 :root {
 	--wrapper: #fafafa;
 	--maintext: #111;
+	--maintext_light: rgba(255, 255, 255, 0.7);
 	--mainbgc: #fcf1e0;
 	--ligth_text: #fff;
 	--subbgc: #fd9222;
+	--dark_fon: #1e1823;
+	--bor_right: rgba(255, 255, 255, 0.5);
 }
 
-/* Обнулення */
+/*-------Обнулення-------*/
 * {
 	padding: 0px;
 	margin: 0px;
@@ -27,7 +30,13 @@ button {
 	cursor: pointer;
 }
 
-/* Загальні стилі */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/*-------Загальні стилі------*/
 body {
 	font-family: "Montserrat", sans-serif;
 	color: var(--maintext);
@@ -43,7 +52,7 @@ body {
 	height: 100%;
 }
 
-/* HEADER */
+/*------HEADER------*/
 .header {
 	display: flex;
 	flex-wrap: wrap;
@@ -83,11 +92,36 @@ body {
 	align-items: center;
 }
 
+.header__navitem {
+	position: relative;
+}
+
 .header__navlink {
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: -0.28px;
 	padding: 28px 0 34px;
+}
+
+.header__navlink::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10px;
+	width: 20%;
+	height: 4px;
+	background-color: var(--subbgc);
+	border-radius: 2px;
+	opacity: 0;
+	transition-property: opacity width;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__navlink:hover::after {
+	opacity: 1;
+	width: 95%;
 }
 
 .header__addlist {
@@ -111,7 +145,7 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-/* Hero Page */
+/*------Hero Page-------*/
 
 .hero-page__inner {
 	display: flex;
@@ -156,12 +190,16 @@ body {
 	background-color: var(--subbgc);
 	border-radius: 100px;
 	padding: 14px 40px;
+	transition-property: color background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main_button:hover,
 .main_button:focus {
 	color: var(--subbgc);
 	background-color: var(--mainbgc);
+	transform: scale(1.1);
 }
 
 .hero-page__buttonlink {
@@ -172,12 +210,16 @@ body {
 	background-color: transparent;
 	border-radius: 100px;
 	padding: 14px 40px;
+	transition-property: color border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-page__buttonlink:hover,
 .hero-page__buttonlink:focus {
 	color: var(--subbgc);
 	border-color: var(--subbgc);
+	transform: scale(1.1);
 }
 
 .hero-page__svglink {
@@ -191,6 +233,9 @@ body {
 	font-weight: 500;
 	line-height: 1.29; /* 128.571% */
 	letter-spacing: -0.42px;
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-page__click {
@@ -200,11 +245,101 @@ body {
 	height: 38px;
 	background-color: var(--ligth_text);
 	border-radius: 50%;
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-page__svg {
+	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-page__svglink:hover > .hero-page__textlink,
+.hero-page__svglink:focus > .hero-page__textlink {
+	color: var(--subbgc);
+	transform: scale(1.1);
+}
+
+.hero-page__svglink:hover > .hero-page__click,
+.hero-page__svglink:focus > .hero-page__click {
+	background-color: var(--subbgc);
+	transform: scale(1.1);
+}
+/* TODO ПЕРЕКРАСИТИ SVG ТА РОЗВЕРНУТИ */
+.hero-page__svglink:hover > .hero-page__svg:hover,
+.hero-page__svglink:focus > .hero-page__svg:hover {
+	fill: var(--ligth_text);
+	transform: rotate(-90deg);
+}
+
+/*------Benefits------*/
+.benefits {
+	background-color: var(--dark_fon);
+	margin-top: 72px;
+}
+
+.benefits__title {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.benefits__list {
+	display: flex;
+	/* flex-wrap: wrap; */
+	padding: 50px 0;
+	column-gap: 70px;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.benefits__item {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	flex-basis: calc((100% - 140px) / 3);
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.benefits__item:not(:last-child) {
+	border-right: 1px solid var(--bor_right);
+	padding-right: 18px;
+}
+
+.benefits__svg {
+	display: block;
+	width: 62px;
+	height: 62px;
+	margin-bottom: 22px;
+}
+.benefits__subtitle {
+	display: block;
+	width: 100%;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+.benefits__text {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: var(--maintext_light);
+	letter-spacing: -0.28px;
+	flex-grow: 1;
 }
