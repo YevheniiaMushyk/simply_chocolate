@@ -256,7 +256,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	transition-property: fill;
+	transition-property: stroke;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -275,7 +275,7 @@ body {
 /* TODO ПЕРЕКРАСИТИ SVG ТА РОЗВЕРНУТИ */
 .hero-page__svglink:hover > .hero-page__svg:hover,
 .hero-page__svglink:focus > .hero-page__svg:hover {
-	fill: var(--ligth_text);
+	stroke: var(--ligth_text);
 	transform: rotate(-90deg);
 }
 
