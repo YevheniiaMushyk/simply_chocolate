@@ -57,6 +57,8 @@ body {
 .header {
 	display: flex;
 	flex-wrap: wrap;
+	height: 100%;
+	align-items: center;
 }
 
 .header__nav {
@@ -78,10 +80,26 @@ body {
 	letter-spacing: -0.54px;
 	text-transform: uppercase;
 	text-align: center;
+	transition-property: background-image;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header__logo_italic {
 	font-style: italic;
+}
+
+.header__logo:hover,
+.header__logo:focus {
+	background-image: radial-gradient(ellipse at center, #fceabc 0%, #fd9222 0%, #000111 48%, #000111 48%, #000111 55%, #000111 55%, #fd9222 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-box-direction-break: clone;
+}
+
+.header__logo:hover > .header__logosvg,
+.header__logo:focus > .header__logosvg {
+	transform: rotate(-45deg);
 }
 
 .header__list {
@@ -125,25 +143,36 @@ body {
 	width: 95%;
 }
 
+.header__add {
+	display: flex;
+}
+
 .header__addlist {
 	display: flex;
 	column-gap: 18px;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+}
+
+.header__additem {
+	height: 24px;
 }
 
 .header__addlink {
-	position: relative;
-	display: block;
-	text-align: center;
-	padding: 28px 0 34px;
+	height: 24px;
+	padding: 40px 0 28px;
 }
 
-.header__addlink svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.header__addsvg {
+	stroke: var(--maintext);
+	transition-property: stroke;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__addlink:hover .header__addsvg,
+.header__addlink:focus .header__addsvg {
+	stroke: var(--subbgc);
 }
 
 /*------Hero Page-------*/
@@ -256,8 +285,9 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	fill: var(--subbgc);
 	transform: translate(-50%, -50%);
-	transition-property: stroke;
+	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -276,7 +306,7 @@ body {
 /* TODO ПЕРЕКРАСИТИ SVG ТА РОЗВЕРНУТИ */
 .hero-page__svglink:hover > .hero-page__svg:hover,
 .hero-page__svglink:focus > .hero-page__svg:hover {
-	stroke: var(--ligth_text);
+	fill: var(--ligth_text);
 	transform: rotate(-90deg);
 }
 
