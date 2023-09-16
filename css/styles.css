@@ -390,12 +390,12 @@ body {
 }
 p.benefits__text {
 	display: flex;
+	height: 100%;
 	align-items: flex-start;
 	justify-content: flex-start;
 	flex-grow: 1;
 	color: var(--maintext_light);
 	letter-spacing: -0.28px;
-	flex-grow: 1;
 }
 
 /* ------Ingridients------ */
@@ -480,7 +480,7 @@ p.benefits__text {
 .prepare__content {
 	display: flex;
 	column-gap: 20px;
-	/* height: 100%; */
+	height: 100%;
 	flex-wrap: wrap;
 }
 .prepare__imgpart {
