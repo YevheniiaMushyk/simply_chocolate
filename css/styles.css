@@ -714,12 +714,14 @@ p.benefits__text {
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 72px 0;
-	/* max-width: 1200px; */
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .subscribe__title {
 	color: var(--ligth_text);
-	margin-bottom: 24px;
+	max-width: 378px;
+	margin: 0 auto 24px auto;
 }
 .subscribe__text {
 	color: var(--ligth_text);
@@ -731,4 +733,29 @@ p.benefits__text {
 }
 .subscribe__button {
 	margin: 0 auto;
+}
+
+/* ------FOOTER------ */
+.footer {
+	padding: 50px 0;
+	background: var(--dark_fon);
+}
+
+.footer__title {
+	color: var(--ligth_text);
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 1.21;
+	letter-spacing: -0.56px;
+	max-width: 300px;
+}
+
+.footer__title_span {
+	color: var(--subbgc);
+}
+.footer__contacts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
 }
