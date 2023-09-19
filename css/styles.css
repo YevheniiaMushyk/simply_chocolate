@@ -634,23 +634,43 @@ p.benefits__text {
 	margin-bottom: 128px;
 }
 .review__title {
-	margin-bottom: 50px;
 }
 .review__list {
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: 28px;
+	margin-top: 90px;
+	margin-bottom: 50px;
 }
 .review__item {
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 calc((100% - 56px) / 3);
 
+	position: relative;
+	top: 0;
+	left: 0;
+
 	border-radius: 15px;
 	border: 1px solid var(--border);
 	background: var(--ligth_text);
 	box-shadow: 0px 9.04932px 26.57166px 0px rgba(215, 228, 249, 0.25);
-	margin-bottom: 50px;
+	padding: 56px 24px 26px;
+}
+.review__image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 80px;
+	max-height: 80px;
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	border-radius: 50%;
+	overflow: hidden;
 }
 .review__smtitle {
 	text-align: center;
@@ -666,6 +686,7 @@ p.benefits__text {
 	letter-spacing: -0.28px;
 }
 .review__button {
+	display: block;
 	color: var(--maintext);
 	font-size: 18px;
 	font-weight: 600;
@@ -685,4 +706,29 @@ p.benefits__text {
 	color: var(--ligth_text);
 	background-color: var(--subbgc);
 	transform: scale(1.1);
+}
+
+/* ------Subscribe new------ */
+.subscribe {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../images/png/Subcribe.png), lightgray 0px -481.157px / 100% 375.122%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 72px 0;
+	/* max-width: 1200px; */
+}
+
+.subscribe__title {
+	color: var(--ligth_text);
+	margin-bottom: 24px;
+}
+.subscribe__text {
+	color: var(--ligth_text);
+	text-align: center;
+	line-height: 1.29;
+	letter-spacing: -0.28px;
+	max-width: 467px;
+	margin: 0 auto 24px auto;
+}
+.subscribe__button {
+	margin: 0 auto;
 }
