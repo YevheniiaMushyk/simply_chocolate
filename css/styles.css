@@ -7,6 +7,7 @@
 	--subbgc: #fd9222;
 	--dark_fon: #1e1823;
 	--bor_right: rgba(255, 255, 255, 0.5);
+	--bor_bottom: rgba(255, 255, 255, 0.1);
 	--border: rgba(17, 17, 17, 0.1);
 	--smtext: rgba(17, 17, 17, 0.7);
 }
@@ -154,6 +155,7 @@ body {
 
 .header__add {
 	display: flex;
+	justify-content: center;
 }
 
 .header__addlist {
@@ -164,11 +166,13 @@ body {
 }
 
 .header__additem {
+	width: 24px;
 	height: 24px;
 }
 
 .header__addlink {
-	height: 24px;
+	width: 100%;
+	height: 100%;
 	padding: 40px 0 28px;
 }
 
@@ -737,10 +741,17 @@ p.benefits__text {
 
 /* ------FOOTER------ */
 .footer {
-	padding: 50px 0;
+	padding: 50px 0 25px;
 	background: var(--dark_fon);
 }
-
+.footer__head {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 62px;
+	border-bottom: 1px solid var(--bor_bottom);
+}
 .footer__title {
 	color: var(--ligth_text);
 	font-size: 28px;
@@ -749,13 +760,149 @@ p.benefits__text {
 	letter-spacing: -0.56px;
 	max-width: 300px;
 }
-
 .footer__title_span {
 	color: var(--subbgc);
 }
 .footer__contacts {
 	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	column-gap: 63px;
+
+	font-style: normal;
+	color: var(--ligth_text);
+	line-height: 1.29;
+}
+.footer__contacts-part {
+	display: flex;
+	flex-direction: column;
+	row-gap: 14px;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.footer__contacts-text {
+	font-weight: 500;
+}
+.footer__contacts-list {
+}
+.footer__contact-item {
+}
+
+.footer__contacts-link {
+	font-weight: 400;
+	letter-spacing: -0.28px;
+	transition-property: color;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__contact-item:hover .footer__contacts-link,
+.footer__contact-item:focus .footer__contacts-link {
+	color: var(--subbgc);
+}
+.footer__contact-item:hover,
+.footer__contact-item:focus {
+	transform: scale(1.1);
+}
+
+.footer__contacts-social-list {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	column-gap: 18px;
+}
+.footer__contacts-social-item {
+	width: 24px;
+	height: 24px;
+	padding-bottom: 28px;
+}
+.footer__contacts-social-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.footer__contacts-svg {
+	stroke: var(--ligth_text);
+	transition-property: stroke;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__contacts-social-link:hover .footer__contacts-svg,
+.footer__contacts-social-link:focus .footer__contacts-svg {
+	stroke: var(--subbgc);
+	transform: scale(1.1);
+}
+.footer__nav {
+}
+.footer__nav-list {
+	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	column-gap: 24px;
+	justify-content: start;
 	align-items: center;
+}
+.footer__nav-item {
+	padding: 24px 0 25px;
+}
+.footer__nav-link {
+	color: var(--ligth_text);
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: -0.28px;
+	transition-property: color;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__nav-item:hover .footer__nav-link,
+.footer__nav-item:focus .footer__nav-link {
+	color: var(--subbgc);
+	transform: scale(1.1);
+}
+
+.footer__nav-item:hover,
+.footer__nav-item:focus {
+	transform: scale(1.1);
+}
+.back-to-top {
+	position: relative;
+	width: 40px;
+	height: 40px;
+
+	transition-property: border;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-to-top__button {
+	position: fixed;
+	right: 10px;
+	bottom: 200px;
+	width: 40px;
+	height: 40px;
+
+	border-radius: 50%;
+	background-color: var(--subbgc);
+
+	transition-property: background-color border;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.back-to-top__buttons-svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(180deg);
+	fill: var(--ligth_text);
+
+	transition-property: fill;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-to-top:hover .back-to-top__button .back-to-top__buttons-svg,
+.back-to-top:focus .back-to-top__button {
+	transform: scale(1.1);
+	background-color: var(--ligth_text);
+	border: 1px solid var(--subbgc);
+	fill: var(--subbgc);
 }

@@ -325,25 +325,30 @@
 		<footer>
 			<section class="footer">
 				<div class="conteiner">
-					<div class="footer__contacts">
+					<div class="footer__head">
 						<h2 class="footer__title"><span class="footer__title_span">Chocolate</span> a delicious cure for a bad day</h2>
-						<address>
-							<p>Contact us</p>
-							<ul>
-								<li><a href="tel:+380684439426" target="_blank">+380 (68) 443-94-26</a></li>
-								<li><a href="mailto:simplychoc@gmail.com" target="_blank">simplychoc@gmail.com</a></li>
-							</ul>
-							<ul>
-								<li>
-									<a href="https://www.instagram.com" target="_blank">
-										<svg class="footer__svg" width="24" height="24">
+						<address class="footer__contacts">
+							<div class="footer__contacts-part">
+								<p class="footer__contacts-text">Contact us</p>
+								<ul class="footer__contacts-list">
+									<li class="footer__contact-item"><a class="footer__contacts-link" href="tel:+380684439426" target="_blank">+380 (68) 443-94-26</a></li>
+									<li class="footer__contact-item">
+										<a class="footer__contacts-link" href="mailto:simplychoc@gmail.com" target="_blank">simplychoc@gmail.com</a>
+									</li>
+								</ul>
+							</div>
+
+							<ul class="footer__contacts-social-list">
+								<li class="footer__contacts-social-item">
+									<a class="footer__contacts-social-link" href="https://www.instagram.com" target="_blank">
+										<svg class="footer__contacts-svg" width="24" height="24">
 											<use href="./images/icons.svg#icon-instagram"></use>
 										</svg>
 									</a>
 								</li>
-								<li>
-									<a href="https://twitter.com/" target="_blank">
-										<svg class="footer__svg" width="24" height="24">
+								<li class="footer__contacts-social-item">
+									<a class="footer__contacts-social-link" href="https://twitter.com/" target="_blank">
+										<svg class="footer__contacts-svg" width="24" height="24">
 											<use href="./images/icons.svg#icon-twitter"></use>
 										</svg>
 									</a>
@@ -352,17 +357,24 @@
 						</address>
 					</div>
 
-					<nav>
-						<ul>
-							<li><a href="#" target="_blank">Home</a></li>
-							<li><a href="#" target="_blank">How it’s made?</a></li>
-							<li><a href="#" target="_blank">Our products</a></li>
-							<li><a href="#" target="_blank">Top sellers</a></li>
-							<li><a href="#" target="_blank">Chocolate is loved</a></li>
+					<nav class="footer__nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item"><a class="footer__nav-link" href="#S0">Home</a></li>
+							<li class="footer__nav-item"><a class="footer__nav-link" href="#S1">How it’s made?</a></li>
+							<li class="footer__nav-item"><a class="footer__nav-link" href="#S2">Our products</a></li>
+							<li class="footer__nav-item"><a class="footer__nav-link" href="#S3">Top sellers</a></li>
+							<li class="footer__nav-item"><a class="footer__nav-link" href="#S4">Chocolate is loved</a></li>
 						</ul>
 					</nav>
 				</div>
 			</section>
 		</footer>
+		<div class="back-to-top conteiner">
+			<a class="back-to-top__button" href="#s0">
+				<svg class="back-to-top__buttons-svg" width="25" height="25">
+					<use href="./images/icons.svg#icon-arow"></use>
+				</svg>
+			</a>
+		</div>
 	</body>
 </html>
