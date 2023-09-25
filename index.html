@@ -369,7 +369,7 @@
 				</div>
 			</section>
 		</footer>
-
+		<!-- TODO USE ПО ЦЕНТРУ SVG РОЗМІРИ INPUTів-->
 		<div class="back-to-top conteiner">
 			<a class="back-to-top__button" href="#s0">
 				<svg class="back-to-top__buttons-svg" width="25" height="25">
@@ -380,69 +380,62 @@
 		<dialog class="buynow">
 			<div class="buynow__container">
 				<button type="button" class="buynow__button_close">
-					<svg class="buynow__icon" width="28" height="28">
+					<svg class="buynow__icon" width="32" height="32">
 						<use href="./images/icons.svg#icon-x-close"></use>
 					</svg>
 				</button>
-				<h2>buy now</h2>
+				<h2 class="buynow__title subtitle"><span class="buynow__title_span subtitle_span">buy</span> now</h2>
 				<form action="/index.html" method="post">
-					<fieldset>
-						<legend>Personal information</legend>
-						<label class="buynow__label" for="user-name">Name</label>
-						<input id="user-name" type="text" name="user-name" class="buynow__input" autocomplete="on" autofocus placeholder="Name" />
-						<label class="buynow__label" for="user-name">Surname</label>
-						<input id="user-surname" type="text" name="user-surname" class="buynow__input" autocomplete="on" placeholder="Surname" />
-					</fieldset>
+					<div class="buynow__forminput">
+						<fieldset class="buynow__field_inputs">
+							<legend class="buynow__legend">Personal information</legend>
+							<div class="buynow__fieldsed_inputs">
+								<label class="buynow__fieldsed_lebel">
+									<input type="text" name="user-name" class="buynow__input" autocomplete="on" autofocus placeholder="Name" />
+								</label>
 
-					<div class="buynow__field">
-						<label class="buynow__label" for="user-email">Email</label>
-						<input id="user-email" type="email" name="user-email" class="buynow__input" autocomplete="on" placeholder="Enter your email" />
-					</div>
+								<label class="buynow__fieldsed_lebel">
+									<input type="text" name="user-surname" class="buynow__input" autocomplete="on" placeholder="Surname" />
+								</label>
+							</div>
+						</fieldset>
 
-					<div class="buynow__field">
-						<span>+380</span>
-						<label class="buynow__label" for="user-phone">Phone number</label>
-						<div class="buynow__dataphone">
-							<input id="user-phone" type="tel" name="user-phone" class="buynow__input" autocomplete="on" placeholder="Phone number" />
+						<div class="buynow__field_inputs">
+							<label class="buynow__label" for="user-email">Email</label>
+							<input id="user-email" type="email" name="user-email" class="buynow__input" autocomplete="on" placeholder="Enter your email" />
+						</div>
 
-							<svg class="modal_icon" width="32" height="24">
-								<use href="./images/icons.svg#icon-ukraine"></use>
-							</svg>
+						<div class="buynow__field_inputs">
+							<label class="buynow__label" for="user-phone">Phone number<span>+380</span></label>
+							<div class="buynow__dataphone">
+								<input id="user-phone" type="tel" name="user-phone" class="buynow__input" autocomplete="on" placeholder="Phone number" />
+
+								<svg class="" width="32" height="24">
+									<use href="./images/icons.svg#icon-ukraine"></use>
+								</svg>
+							</div>
+						</div>
+
+						<div class="buynow__field_inputs">
+							<label class="buynow__label" for="user-cardnumber">Card number</label>
+							<div class="buynow__cardnumber">
+								<input id="user-cardnumber" type="tel" name="user-cardnumber" class="buynow__input" autocomplete="on" placeholder="Enter card" />
+
+								<svg class="" width="44" height="30">
+									<use href="./images/icons.svg#icon-mastercard"></use>
+								</svg>
+							</div>
+						</div>
+
+						<div class="buynow__field_inputs">
+							<label class="buynow__label" for="user-comment">Comment</label>
+							<div class="buynow__comment">
+								<textarea id="user-comment" type="tel" name="user-comment" class="buynow__input" autocomplete="on" placeholder="Enter text"></textarea>
+							</div>
 						</div>
 					</div>
 
-					<!-- <div class="modal_comment">
-                        <label class="modal_label" for="user-comment">Comment</label>
-                        <textarea
-                            id="user-comment"
-                            name="user-comment"
-                            placeholder="Text input"
-                            class="modal_ta"
-                        ></textarea>
-                    </div> -->
-
-					<!-- <div class="modal_chb">
-                        <input
-                            id="user-privacy"
-                            type="checkbox"
-                            name="user-privacy"
-                            value="true"
-                            class="visually-hidden"
-                        />
-                        <label class="modal_chblabel" for="user-privacy">
-                            <span class="modal_chbicon">
-                                <svg class="modal_chbicon_svg" width="10" height="8">
-                                    <use href="./images/icons.svg#icon-checkbox"></use>
-                                </svg>
-                            </span>
-                            <span>
-                                I accept the terms and conditions of the
-                                <a href="#" target="_blank" class="modal_link">Privacy Policy</a>
-                            </span>
-                        </label>
-                    </div> -->
-
-					<button class="buynow__buttom_submit" type="submit">Submit</button>
+					<button class="buynow__buttom_submit main_button" type="submit">Submit</button>
 				</form>
 			</div>
 		</dialog>
