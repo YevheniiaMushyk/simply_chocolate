@@ -64,25 +64,25 @@
 		<main>
 			<!-- Hero Page -->
 			<!-- TODO СТРІЛКИ ЗМІНА КОЛЬОРУ -->
-			<section class="hero-page">
+			<section class="heropage">
 				<div class="conteiner">
-					<div class="hero-page__inner">
-						<h1 class="hero-page__primertext" id="S0">Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
-						<div class="hero-page__interactive">
-							<ul class="hero-page__list">
+					<div class="heropage__inner">
+						<h1 class="heropage__primertext" id="S0">Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
+						<div class="heropage__interactive">
+							<ul class="heropage__list">
 								<li>
-									<button class="hero-page__button main_button" type="button">Buy now</button>
+									<button class="heropage__button main_button" type="button">Buy now</button>
 								</li>
 								<li>
-									<a class="hero-page__buttonlink" href="#S1">How it’s made</a>
+									<a class="heropage__buttonlink" href="#S1">How it’s made</a>
 								</li>
 							</ul>
 
 							<div>
-								<a class="hero-page__svglink" href="#">
-									<span class="hero-page__textlink">scroll down</span>
-									<span class="hero-page__click">
-										<svg class="hero-page__svg" width="22" height="22">
+								<a class="heropage__svglink" href="#">
+									<span class="heropage__textlink">scroll down</span>
+									<span class="heropage__click">
+										<svg class="heropage__svg" width="22" height="22">
 											<use href="./images/icons.svg#icon-arow"></use>
 										</svg>
 									</span>
@@ -380,7 +380,7 @@
 		<dialog class="buynow">
 			<div class="buynow__container">
 				<button type="button" class="buynow__button_close">
-					<svg class="buynow__icon" width="32" height="32">
+					<svg class="buynow__icon" width="28" height="28">
 						<use href="./images/icons.svg#icon-x-close"></use>
 					</svg>
 				</button>
@@ -442,17 +442,17 @@
                         </label>
                     </div> -->
 
-					<button class="buynow__buttom" type="submit">Submit</button>
+					<button class="buynow__buttom_submit" type="submit">Submit</button>
 				</form>
 			</div>
 		</dialog>
 
 		<script>
-			const hero-page__button = document.querySelector(".hero-page__button");
+			const heropage__button = document.querySelector(".heropage__button");
 			const buynow = document.querySelector(".buynow");
 			const buynow__button_close = document.querySelector(".buynow__button_close");
 
-			hero-page__button.addEventListener("click", () => {
+			heropage__button.addEventListener("click", () => {
 				buynow.showModal();
 			});
 			buynow__button_close.addEventListener("click", () => {
