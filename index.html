@@ -21,6 +21,7 @@
 		<title>Simply Chocolate</title>
 	</head>
 	<body>
+		<!-- TODO ДОДАТИ КНОПКУК НА ВЕРХ АНІМАЦІЮ -->
 		<header>
 			<div class="conteiner">
 				<div class="header">
@@ -63,7 +64,6 @@
 		</header>
 		<main>
 			<!-- Hero Page -->
-			<!-- TODO СТРІЛКИ ЗМІНА КОЛЬОРУ -->
 			<section class="heropage">
 				<div class="conteiner">
 					<div class="heropage__inner">
@@ -79,7 +79,7 @@
 							</ul>
 
 							<div>
-								<a class="heropage__svglink" href="#">
+								<a class="heropage__svglink" href="#S2">
 									<span class="heropage__textlink">scroll down</span>
 									<span class="heropage__click">
 										<svg class="heropage__svg" width="22" height="22">
@@ -369,7 +369,7 @@
 				</div>
 			</section>
 		</footer>
-		<!-- TODO USE ПО ЦЕНТРУ SVG РОЗМІРИ INPUTів-->
+		<!-- TODO РОЗМІСТИТИ З БОКУ КОНТЕЙНЕРА -->
 		<div class="back-to-top conteiner">
 			<a class="back-to-top__button" href="#s0">
 				<svg class="back-to-top__buttons-svg" width="25" height="25">
@@ -377,6 +377,7 @@
 				</svg>
 			</a>
 		</div>
+		<!-- TODO USE ПО ЦЕНТРУ SVG ХОВЕРИ ДЛЯ INPUTів ТА TEXTAREA BUTTON-->
 		<dialog class="buynow">
 			<div class="buynow__container">
 				<button type="button" class="buynow__button_close">
@@ -406,13 +407,15 @@
 						</div>
 
 						<div class="buynow__field_inputs">
-							<label class="buynow__label" for="user-phone">Phone number<span>+380</span></label>
+							<label class="buynow__label" for="user-phone">Phone number</label>
 							<div class="buynow__dataphone">
-								<input id="user-phone" type="tel" name="user-phone" class="buynow__input" autocomplete="on" placeholder="Phone number" />
-
-								<svg class="" width="32" height="24">
-									<use href="./images/icons.svg#icon-ukraine"></use>
-								</svg>
+								<input id="user-phone" type="tel" name="user-phone" class="buynow__input inputdetails" autocomplete="on" placeholder="Phone number" />
+								<div class="buynow__phonedetails">
+									<svg class="buynow__countryicon" width="32" height="24">
+										<use href="./images/icons.svg#icon-ukraine"></use>
+									</svg>
+									<span class="buynow__codephone">+380</span>
+								</div>
 							</div>
 						</div>
 
@@ -421,7 +424,7 @@
 							<div class="buynow__cardnumber">
 								<input id="user-cardnumber" type="tel" name="user-cardnumber" class="buynow__input" autocomplete="on" placeholder="Enter card" />
 
-								<svg class="" width="44" height="30">
+								<svg class="buynow__cardicon" width="44" height="30">
 									<use href="./images/icons.svg#icon-mastercard"></use>
 								</svg>
 							</div>
@@ -429,9 +432,7 @@
 
 						<div class="buynow__field_inputs">
 							<label class="buynow__label" for="user-comment">Comment</label>
-							<div class="buynow__comment">
-								<textarea id="user-comment" type="tel" name="user-comment" class="buynow__input" autocomplete="on" placeholder="Enter text"></textarea>
-							</div>
+							<textarea id="user-comment" type="text" name="user-comment" class="buynow__textarea" autocomplete="on" placeholder="Enter text"></textarea>
 						</div>
 					</div>
 
@@ -442,10 +443,14 @@
 
 		<script>
 			const heropage__button = document.querySelector(".heropage__button");
+			const sellers__button = document.querySelector(".sellers__button");
 			const buynow = document.querySelector(".buynow");
 			const buynow__button_close = document.querySelector(".buynow__button_close");
 
 			heropage__button.addEventListener("click", () => {
+				buynow.showModal();
+			});
+			sellers__button.addEventListener("click", () => {
 				buynow.showModal();
 			});
 			buynow__button_close.addEventListener("click", () => {

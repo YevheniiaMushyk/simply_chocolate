@@ -47,6 +47,9 @@ img {
 	/* height: auto; */
 	object-fit: cover;
 }
+textarea {
+	resize: none;
+}
 
 /*-------Загальні стилі------*/
 body {
@@ -318,8 +321,8 @@ body {
 	transform: scale(1.1) rotate(-90deg);
 }
 
-.heropage__svglink:hover > .heropage__svg,
-.heropage__svglink:focus > .heropage__svg {
+.heropage__svglink:hover .heropage__svg,
+.heropage__svglink:focus .heropage__svg {
 	fill: var(--ligth_text);
 }
 
@@ -967,7 +970,7 @@ p.benefits__text {
 	flex-direction: column;
 	row-gap: 8px;
 	align-items: flex-start;
-	width: auto;
+	width: 100%;
 }
 .buynow__fieldsed_inputs {
 	display: flex;
@@ -990,9 +993,10 @@ p.benefits__text {
 }
 
 .buynow__input {
+	width: 100%;
 	color: var(--maintext);
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: normal;
 	letter-spacing: -0.36px;
 	padding: 22px 24px;
@@ -1000,14 +1004,65 @@ p.benefits__text {
 	border: 1.5px solid rgba(17, 17, 17, 0.05);
 	box-shadow: 0px 5.44492px 5.44492px 0px rgba(0, 0, 0, 0.03);
 }
-.buynow__input::placeholder {
+.buynow__input::placeholder,
+.buynow__textarea::placeholder {
 	color: var(--placeholdertext);
 	font-size: 18px;
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: -0.36px;
 }
-.buynow__field {
+.inputdetails {
+	padding-left: 177px;
 }
-.buynow__dataphone {
+.buynow__dataphone,
+.buynow__cardnumber {
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.buynow__phonedetails {
+	position: absolute;
+	top: 50%;
+	left: 24px;
+	transform: translateY(-50%);
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 18px;
+	width: 125px;
+	border-right: 1px solid var(--placeholdertext);
+}
+.buynow__countryicon {
+}
+.buynow__codephone {
+	color: var(--maintext);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -0.36px;
+}
+.buynow__cardicon {
+	position: absolute;
+	top: 50%;
+	right: 24px;
+	transform: translateY(-50%);
+}
+.buynow__textarea {
+	width: 100%;
+	color: var(--maintext);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -0.36px;
+	padding: 22px 24px;
+	border-radius: 13px;
+	border: 1.5px solid rgba(17, 17, 17, 0.05);
+	box-shadow: 0px 5.44492px 5.44492px 0px rgba(0, 0, 0, 0.03);
+}
+.buynow__buttom_submit {
+	margin: auto;
 }
