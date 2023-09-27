@@ -377,7 +377,7 @@
 				</svg>
 			</a>
 		</div>
-		<!-- TODO USE ПО ЦЕНТРУ SVG ХОВЕРИ ДЛЯ INPUTів ТА TEXTAREA BUTTON-->
+		<!-- TODO USE ПО ЦЕНТРУ SVG -->
 		<dialog class="buynow">
 			<div class="buynow__container">
 				<button type="button" class="buynow__button_close">
@@ -392,7 +392,7 @@
 							<legend class="buynow__legend">Personal information</legend>
 							<div class="buynow__fieldsed_inputs">
 								<label class="buynow__fieldsed_lebel">
-									<input type="text" name="user-name" class="buynow__input" autocomplete="on" autofocus placeholder="Name" />
+									<input type="text" name="user-name" class="buynow__input" autocomplete="on" autofocus="on" placeholder="Name" />
 								</label>
 
 								<label class="buynow__fieldsed_lebel">
@@ -440,12 +440,65 @@
 				</form>
 			</div>
 		</dialog>
+		<!-- TODO USE ПО ЦЕНТРУ SVG -->
+		<dialog class="leavereview">
+			<div class="leavereview__container">
+				<button type="button" class="leavereview__button_close">
+					<svg class="leavereview__icon" width="32" height="32">
+						<use href="./images/icons.svg#icon-x-close"></use>
+					</svg>
+				</button>
+				<h2 class="leavereview__title subtitle">LEAVE A REVIEW ABOUT <span class="leavereview__title_span subtitle_span">OUR CHOCOLATE</span></h2>
+				<form action="/index.html" method="post">
+					<div class="leavereview__form">
+						<input type="text" name="user_name_review" class="leavereview__input" autocomplete="on" autofocus="on" placeholder="Name" />
+						<input type="text" name="user_email_review" class="leavereview__input" autocomplete="on" placeholder="Email" />
+						<div class="leavereview__dataphone">
+							<input type="tel" name="user_phone_review" class="leavereview__input lrinputdetails" autocomplete="on" placeholder="Phone number" />
+							<div class="buynow__phonedetails">
+								<svg class="buynow__countryicon" width="32" height="24">
+									<use href="./images/icons.svg#icon-ukraine"></use>
+								</svg>
+								<span class="buynow__codephone">+380</span>
+							</div>
+						</div>
+
+						<textarea name="user_comment_review" class="leavereview__textarea" autocomplete="on" placeholder="Enter text"></textarea>
+						<button class="leavereview__buttom_send main_button" type="submit">Send</button>
+					</div>
+				</form>
+			</div>
+		</dialog>
+
+		<dialog class="subscribeform">
+			<div class="subscribeform__top">
+				<span class="subscribeform__foneimage"></span>
+				<button type="button" class="subscribeform__button_close">
+					<svg class="subscribeform__icon" width="32" height="32">
+						<use href="./images/icons.svg#icon-x-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="subscribeform__conteiner">
+				<h2 class="subscribeform__title subtitle">Explore our <span class="subtitle_span">new chocolate</span> first!</h2>
+				<form action="/index.html" method="post">
+					<input type="text" name="user_email_review" class="subscribeform__input" autocomplete="on" autofocus="on" placeholder="Enter your email" />
+					<button type="button" class="subscribeform__button main_button">Subscribe</button>
+				</form>
+			</div>
+		</dialog>
 
 		<script>
 			const heropage__button = document.querySelector(".heropage__button");
 			const sellers__button = document.querySelector(".sellers__button");
 			const buynow = document.querySelector(".buynow");
 			const buynow__button_close = document.querySelector(".buynow__button_close");
+			const leavereview = document.querySelector(".leavereview");
+			const review__button = document.querySelector(".review__button");
+			const leavereview__button_close = document.querySelector(".leavereview__button_close");
+			const subscribeform = document.querySelector(".subscribeform");
+			const subscribe__button = document.querySelector(".subscribe__button");
+			const subscribeform__button_close = document.querySelector(".subscribeform__button_close");
 
 			heropage__button.addEventListener("click", () => {
 				buynow.showModal();
@@ -455,6 +508,18 @@
 			});
 			buynow__button_close.addEventListener("click", () => {
 				buynow.close();
+			});
+			review__button.addEventListener("click", () => {
+				leavereview.showModal();
+			});
+			leavereview__button_close.addEventListener("click", () => {
+				leavereview.close();
+			});
+			subscribe__button.addEventListener("click", () => {
+				subscribeform.showModal();
+			});
+			subscribeform__button_close.addEventListener("click", () => {
+				subscribeform.close();
 			});
 		</script>
 	</body>

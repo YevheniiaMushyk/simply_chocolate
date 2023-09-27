@@ -19,11 +19,6 @@
 	margin: 0px;
 	border: 0px;
 }
-
-html {
-	scroll-behavior: smooth;
-}
-
 a:link {
 	text-decoration: none;
 }
@@ -35,12 +30,9 @@ ul {
 	padding-left: 0;
 	margin: 0;
 }
-
 button {
-	font-family: inherit;
 	cursor: pointer;
 }
-
 img {
 	display: block;
 	max-width: 100%;
@@ -48,10 +40,32 @@ img {
 	object-fit: cover;
 }
 textarea {
+	display: block;
 	resize: none;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+
+input:active,
+input:hover,
+input:focus,
+textarea:active,
+textarea:hover,
+textarea:focus {
+	outline: 0;
+	outline-offset: 0;
 }
 
 /*-------Загальні стилі------*/
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: "Montserrat", sans-serif;
 	color: var(--maintext);
@@ -917,12 +931,9 @@ p.benefits__text {
 	left: 0;
 	right: 0;
 	margin: auto;
-	border: 1 solid var(--wrapper);
+	border: 0 solid transparent;
 	border-radius: 15px;
 	background: var(--wrapper);
-	border: solid;
-
-	/* color: black; */
 }
 .buynow__container {
 	width: 100%;
@@ -954,7 +965,9 @@ p.benefits__text {
 	height: 1em;
 }
 .buynow__title {
-	margin-bottom: 32px;
+	max-width: 122px;
+	text-align: center;
+	margin: 0 auto 32px;
 }
 .buynow__forminput {
 	display: flex;
@@ -1036,7 +1049,13 @@ p.benefits__text {
 	width: 125px;
 	border-right: 1px solid var(--placeholdertext);
 }
-.buynow__countryicon {
+.buynow__fieldsed_lebel:focus,
+.buynow__fieldsed_lebel:hover,
+.buynow__input:focus,
+.buynow__input:hover,
+.buynow__textarea:focus,
+.buynow__textarea:hover {
+	border-color: var(--subbgc);
 }
 .buynow__codephone {
 	color: var(--maintext);
@@ -1053,6 +1072,7 @@ p.benefits__text {
 }
 .buynow__textarea {
 	width: 100%;
+	min-height: 137px;
 	color: var(--maintext);
 	font-size: 18px;
 	font-weight: 500;
@@ -1065,4 +1085,104 @@ p.benefits__text {
 }
 .buynow__buttom_submit {
 	margin: auto;
+}
+
+/* ------Form leave review------ */
+.leavereview {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border: 0 solid transparent;
+	border-radius: 15px;
+	background: var(--wrapper);
+}
+.leavereview__container {
+	width: 100%;
+	height: 100%;
+	max-width: 517px;
+	padding: 40px;
+}
+.leavereview__button_close {
+	display: block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	background-color: transparent;
+}
+.leavereview__icon {
+}
+.leavereview__title {
+	max-width: 298px;
+	margin-bottom: 40px;
+	text-align: left;
+}
+.leavereview__form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 18px;
+	align-items: flex-start;
+	width: 100%;
+}
+.leavereview__input,
+.leavereview__textarea {
+	width: 100%;
+	color: var(--maintext);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -0.36px;
+	padding: 22px 24px;
+	border-radius: 13px;
+	border: 1.5px solid rgba(17, 17, 17, 0.05);
+	box-shadow: 0px 5.44492px 5.44492px 0px rgba(0, 0, 0, 0.03);
+}
+.leavereview__input::placeholder,
+.leavereview__textarea::placeholder {
+	color: var(--placeholdertext);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.36px;
+}
+.leavereview__dataphone {
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.leavereview__buttom_send {
+	margin: 0 auto;
+}
+.lrinputdetails {
+	padding-left: 177px;
+	width: 437px;
+}
+.leavereview__input:focus,
+.leavereview__input:hover,
+.leavereview__textarea:focus,
+.leavereview__textarea:hover {
+	border-color: var(--subbgc);
+}
+
+/* ------Form  subscribeform------ */
+.subscribeform {
+}
+.subscribeform__top {
+}
+.subscribeform__foneimage {
+}
+.subscribeform__button_close {
+}
+.subscribeform__icon {
+}
+.subscribeform__conteiner {
+}
+.subscribeform__title {
+}
+.subscribeform__input {
+}
+.subscribeform__button {
 }
