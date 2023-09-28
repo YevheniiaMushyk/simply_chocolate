@@ -151,8 +151,22 @@
 					</p>
 					<ul class="ingrid__list">
 						<li class="ingrid__item">
-							<img src="./images/png/milk-chocolate.png" alt="milk chocolate" width="206px" />
-							<p class="ingrid__imgtitle">mILK CHOCOLATE</p>
+							<div class="overlay-box">
+								<img src="./images/png/milk-chocolate.png" alt="milk chocolate" width="206px" />
+								<p class="ingrid__imgtitle">mILK CHOCOLATE</p>
+								<div class="ingrid__overflow">
+									<h2 class="ingrid__oftitle">Milk chocolate</h2>
+									<div class="ingrid__ofinterective">
+										<span class="ingrid__ofbuttom_main">chocolate</span>
+										<span class="ingrid__ofbuttom_sub">the benefits</span>
+									</div>
+									<p class="ingrid__oftext">
+										Milk chocolate is a solid chocolate confectionery containing cocoa, sugar and milk. It is the most consumed type of chocolate. Chocolate was
+										originally sold and consumed as a beverage in pre-Columbian times. Although four-fifths of all milk chocolate is sold in the United States
+										and Europe.
+									</p>
+								</div>
+							</div>
 						</li>
 						<li class="ingrid__item">
 							<img src="./images/png/milk.png" alt="milk" width="206px" />
@@ -472,7 +486,6 @@
 
 		<dialog class="subscribeform">
 			<div class="subscribeform__top">
-				<span class="subscribeform__foneimage"></span>
 				<button type="button" class="subscribeform__button_close">
 					<svg class="subscribeform__icon" width="32" height="32">
 						<use href="./images/icons.svg#icon-x-close"></use>
@@ -480,9 +493,12 @@
 				</button>
 			</div>
 			<div class="subscribeform__conteiner">
-				<h2 class="subscribeform__title subtitle">Explore our <span class="subtitle_span">new chocolate</span> first!</h2>
-				<form action="/index.html" method="post">
-					<input type="text" name="user_email_review" class="subscribeform__input" autocomplete="on" autofocus="on" placeholder="Enter your email" />
+				<h2 class="subscribeform__title subtitle">
+					Explore our <br />
+					<span class="subtitle_span">new chocolate</span> first!
+				</h2>
+				<form class="subscribeform__form" action="/index.html" method="post">
+					<input type="email" name="user_email_review" class="subscribeform__input" autocomplete="on" autofocus="on" placeholder="Enter your email" />
 					<button type="button" class="subscribeform__button main_button">Subscribe</button>
 				</form>
 			</div>
