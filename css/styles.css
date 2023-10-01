@@ -65,6 +65,8 @@ textarea:focus {
 /*-------Загальні стилі------*/
 html {
 	scroll-behavior: smooth;
+	/* scrollbar-color: var(--subbgc) var(--placeholdertext);
+	scrollbar-width: thin; */
 }
 body {
 	font-family: "Montserrat", sans-serif;
@@ -446,14 +448,10 @@ p.benefits__text {
 	column-gap: 19px;
 }
 .ingrid__item {
-	display: flex;
-	flex-direction: column;
 	flex: 0 1 calc((100% - 57px) / 4);
-	justify-content: flex-start;
-	align-items: flex-start;
-	gap: 36px;
-	padding: 28px 36px 28px 28px;
 	border-radius: 15px;
+	background-color: var(--ligth_text);
+	overflow: hidden;
 }
 
 .ingrid__item:nth-child(even) {
@@ -475,37 +473,64 @@ p.benefits__text {
 	border: 1px solid var(--dark_fon);
 	background: var(--dark_fon);
 }
-
+.ingrid__overlaybox {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.ingrid__content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 36px;
+	padding: 28px 36px 28px 28px;
+	border-radius: 15px;
+}
 .ingrid__imgtitle {
 	font-weight: 600;
 	line-height: 1.29;
 	letter-spacing: -0.28px;
 	text-transform: uppercase;
 }
-
-.overlay-box {
-	position: relative;
-	overflow: hidden;
+.ingrid__overlay::-webkit-scrollbar {
+	width: 5px;
 }
-.ingrid__overflow {
+
+.ingrid__overlay::-webkit-scrollbar-track {
+	background-color: var(--placeholdertext);
+	border-radius: 5px;
+}
+
+.ingrid__overlay::-webkit-scrollbar-thumb {
+	background-color: var(--subbgc);
+	border-radius: 5px;
+}
+
+.ingrid__overlay:nth-child(4n + 3)::-webkit-scrollbar-thumb {
+	background-color: var(--dark_fon);
+}
+
+.ingrid__overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	padding: 20px;
-	transform: translateY(100%);
-	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	border-radius: 15px;
-	background-color: var(--ligth_text);
-	/* opacity: 0;
+	background: var(--ligth_text);
+	overflow-y: auto;
+	scrollbar-gutter: stable;
+	transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+	opacity: 0;
 	visibility: hidden;
-	pointer-events: none; */
-	/* opacity: 1;
-	visibility: visible;
-	pointer-events: auto; */
+	pointer-events: none;
 }
-.ingrid__oftitle {
+
+.ingrid__oltitle {
 	color: var(--maintext);
 	font-size: 18px;
 	font-weight: 600;
@@ -515,14 +540,14 @@ p.benefits__text {
 	text-align: left;
 	margin-bottom: 8px;
 }
-.ingrid__ofinterective {
+.ingrid__olinterective {
 	display: flex;
 	column-gap: 6px;
 	justify-content: flex-start;
 	align-items: center;
 	margin-bottom: 14px;
 }
-.ingrid__ofbuttom_main {
+.ingrid__olbuttom_main {
 	color: var(--ligth_text);
 	font-size: 10px;
 	font-weight: 400;
@@ -531,7 +556,7 @@ p.benefits__text {
 	background-color: var(--subbgc);
 	border-radius: 35px;
 }
-.ingrid__ofbuttom_sub {
+.ingrid__olbuttom_sub {
 	color: var(--maintext);
 	font-size: 10px;
 	font-weight: 400;
@@ -541,14 +566,21 @@ p.benefits__text {
 	border: 1px solid var(--subbgc);
 	border-radius: 35px;
 }
-.ingrid__oftext {
+.ingrid__oltext {
 	color: var(--maintext);
 	text-overflow: ellipsis;
 	whitespace: nowrap;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.29; /* 128.571% */
 	letter-spacing: -0.28px;
+}
+.ingrid__item:hover .ingrid__overlay,
+.ingrid__item:focus .ingrid__overlay {
+	transform: rotateY(180deg) scaleX(-1);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
 }
 
 /* ------Video-------  */
